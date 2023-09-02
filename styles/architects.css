@@ -8,6 +8,7 @@
     margin: 0;
     padding: 0;
 }
+
 :root {
     --dark-01: #131313;
     --dark-02: #424242;
@@ -15,10 +16,12 @@
     --orange-01: #FF900E;
     --white-01: #ffffff;
 }
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 .btn-primary {
     border-radius: 8px;
     background: var(--orange-01);
@@ -29,6 +32,7 @@
     border: 0;
     cursor: pointer;
 }
+
 /* Header Style */
 header {
     background: rgba(255, 144, 14, 0.10);
@@ -64,33 +68,40 @@ nav li a {
     color: var(--dark-02);
     text-decoration: none;
 }
+
 /* Banner Styles */
 .banner {
     padding: 102px 0 0 0;
 }
+
 .banner-content {
     max-width: 862px;
     margin: 0 auto;
     text-align: center;
 }
+
 .banner-content h2 {
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 2rem;
     color: var(--dark-01);
 }
+
 .banner-content p {
     color: var(--dark-03);
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 32px;
 }
+
 .banner-content button {
     margin-bottom: 50px;
 }
+
 .banner img {
     width: 100%;
 }
+
 /* Teams Styles */
 .teams {
     max-width: 1100px;
@@ -98,27 +109,33 @@ nav li a {
     display: flex;
     align-items: center;
 }
+
 .teams-images {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
+
 .teams-content {
     margin-left: 76px;
 }
+
 .teams-content h3 {
     margin-bottom: 2rem;
     font-size: 45px;
     font-weight: 700;
     color: var(--dark-01);
 }
-.teams-content h3 span:first-child{
+
+.teams-content h3 span:first-child {
     color: var(--dark-03);
     font-weight: 500;
 }
-.teams-content h3 span:last-child{
+
+.teams-content h3 span:last-child {
     color: var(--orange-01);
 }
+
 .teams-content p {
     margin-bottom: 2.5rem;
     font-size: 16px;
@@ -126,62 +143,153 @@ nav li a {
     line-height: 26px;
 }
 
+/* Facts Styles */
+.facts {
+    margin-bottom: 180px;
+}
+
+.facts-title {
+    margin-bottom: 100px;
+}
+
+.facts-title h4 {
+    font-size: 45px;
+    font-weight: 700;
+    color: var(--dark-01);
+    margin-bottom: 2rem;
+}
+
+.facts-title p {
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--dark-03);
+    max-width: 542px;
+}
+
+.facts-cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.facts-cards .card {
+    border-radius: 8px;
+    border: 1px solid var(--orange-01);
+    padding: 50px 30px;
+}
+
+.facts-cards img {
+    margin-bottom: 10px;
+}
+
+.facts-cards span {
+    display: block;
+    font-size: 45px;
+    font-weight: 600;
+    color: var(--dark-02);
+}
+
+.facts-cards p {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--dark-03);
+}
+
 /* Responsive Styles */
 @media screen and (max-width: 1199.98px) {
     .teams {
         max-width: 100%;
         flex-direction: column-reverse;
+        margin-bottom: 80px;
     }
+
     .teams-content {
         margin: 0 0 50px 0;
         text-align: center;
         max-width: 862px;
     }
+    .facts {
+        margin-bottom: 50px;
+    }
+    .facts-title {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    .facts-title p {
+        margin: 0 auto;
+    }
 }
-@media screen and (min-width: 992px) and (max-width: 1199.98px) {
-    
-}
-@media screen and (max-width: 991.98px) {
 
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {}
+
+@media screen and (max-width: 991.98px) {
+    .facts-cards {
+        flex-wrap: wrap;
+    }
+    .facts-cards .card {
+        margin: 0.5rem;
+    }
 }
+
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
     
+    .facts-cards .card {
+        width: 39.9%;
+    }
 }
+
 @media screen and (max-width: 767.98px) {
     header {
         padding: 1.5rem 0 16px 0;
     }
+
     nav {
         flex-direction: column;
     }
+
     nav h1 {
         margin-bottom: 1.5rem;
     }
+
     .banner {
         padding-top: 3rem;
     }
+
     .banner-content h2 {
         font-size: 3.8rem;
     }
+
     .teams-images {
         gap: 1rem;
     }
+
     .teams-images img {
         max-width: 100%;
     }
 }
+
 @media screen and (min-width: 576px) and (max-width: 767.98px) {
     nav li {
         margin: 0 2rem;
     }
-    
-}
-@media screen and (max-width: 575.98px) {
-    nav > ul {
-        flex-direction: column;
-    }
-    nav li {
-        margin: 0 0 2rem 0;
+    .facts-cards .card {
+        width: 36%;
     }
 }
 
+@media screen and (max-width: 575.98px) {
+    nav>ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        margin: 0 0 2rem 0;
+    }
+    .facts-cards .card {
+        width: 50%;
+    }
+    .facts-cards {
+        flex-direction: column;
+    }
+}
