@@ -196,6 +196,52 @@ nav li a {
     color: var(--dark-03);
 }
 
+/* Sponsors Styles */
+.sponsor {
+    margin-bottom: 130px;
+}
+
+.sponsor-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.sponsor-title h4 {
+    font-size: 45px;
+    font-weight: 700;
+    color: var(--dark-01);
+    margin-bottom: 2rem;
+}
+
+.sponsor-title p {
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--dark-03);
+    max-width: 542px;
+    margin: 0 auto;
+}
+
+.sponsor-images {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Footer Styles */
+footer {
+    margin-bottom: 50px;
+}
+
+footer p {
+    border-radius: 8px;
+    background: #FFF4E7;
+    padding: 40px 0;
+    text-align: center;
+    color: var(--dark-02);
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
 /* Responsive Styles */
 @media screen and (max-width: 1199.98px) {
     .teams {
@@ -209,15 +255,27 @@ nav li a {
         text-align: center;
         max-width: 862px;
     }
+
     .facts {
         margin-bottom: 50px;
     }
+
     .facts-title {
         margin-bottom: 50px;
         text-align: center;
     }
+
     .facts-title p {
         margin: 0 auto;
+    }
+    .sponsor {
+        margin-bottom: 60px;
+    }
+    .sponsor-images img {
+        max-width: 100px;
+    }
+    footer {
+        margin-bottom: 0;
     }
 }
 
@@ -227,13 +285,14 @@ nav li a {
     .facts-cards {
         flex-wrap: wrap;
     }
+
     .facts-cards .card {
         margin: 0.5rem;
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
-    
+
     .facts-cards .card {
         width: 39.9%;
     }
@@ -273,6 +332,7 @@ nav li a {
     nav li {
         margin: 0 2rem;
     }
+
     .facts-cards .card {
         width: 36%;
     }
@@ -286,10 +346,19 @@ nav li a {
     nav li {
         margin: 0 0 2rem 0;
     }
+
     .facts-cards .card {
         width: 50%;
     }
+
     .facts-cards {
         flex-direction: column;
+    }
+    .sponsor-images {
+        flex-direction: column;
+    }
+    .sponsor-images img {
+        max-width: 100%;
+        margin-bottom: 30px;
     }
 }
